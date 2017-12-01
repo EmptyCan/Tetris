@@ -1,0 +1,27 @@
+		.wrap{
+			position: relative;
+			border: 1px solid;
+		}
+		.pannel{
+			margin-left: 300px;
+			width: 400px;
+			height: 600px;
+			border: 1px solid;
+		}
+		.pannel td{
+			border: 1px solid;
+		}
+		.footer{
+			position: absolute;
+			right: 40%;
+			top:50%;
+		}
+		.next table{
+			width: 140px;
+			height: 140px;
+			border: 1px solid;
+		}
+		.next td{
+
+			border: 1px solid;
+		}
