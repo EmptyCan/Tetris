@@ -9,7 +9,9 @@
 			border: 1px solid;
 		}
 		.pannel td{
+			position: relative;
 			border: 1px solid;
+			z-index: 0;
 		}
 		.footer{
 			position: absolute;

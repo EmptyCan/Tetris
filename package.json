@@ -1,0 +1,29 @@
+{
+  "name": "tetris",
+  "version": "1.0.0",
+  "description": "页面小游戏\r 第一次做小游戏，这次就全程直播，做一点上传一点。\r 进度有点慢，加油\r Day 1\r 到目前为止只是构思了一下，还没有敲代码。\r 计划用二维数组来实现4*4方块。不同的形状统统继承这个4*4方块。\r 方块拥有4种方法： 旋转，移动，速降，显示。\r 目前搞定了旋转的关键代码：\r ```\r //方块顺时针旋转90度。\r var arr = [[1,1,1,1],\r        [0,0,0,0],\r        [0,0,0,0],\r        [0,0,0,0]\r        ]\r var newArray = [];\r for(var i = 0;i<4;i++){\r     newArray[i] = [];\r }\r for( i = 0,d = 3;i<4;i++,d--){\r     for(var j = 0;j<4;j++){\r         newArray[j][d] = arr[i][j];\r     }\r }\r console.log(newArray)\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmptyCan/Tetris.git"
+  },
+  "keywords": [],
+  "author": "button",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmptyCan/Tetris/issues"
+  },
+  "homepage": "https://github.com/EmptyCan/Tetris#readme",
+  "devDependencies": {
+    "webpack": "^3.9.1"
+  },
+  "scripts": {
+    "devserver": "webpack-dev-server"
+  },
+  "dependencies": {
+    "webpack-dev-server": "^2.9.5"
+  }
+}
