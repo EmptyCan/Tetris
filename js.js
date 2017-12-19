@@ -294,11 +294,7 @@ $(function(){
                 }
             }
             $("#score").html(score);
-            /*if (high < score) {
-                high = score;
-                $("#high").html(high);
-                document.cookie = "highScore ="+ high;
-            }*/
+           
         }
         
 	//===========================================七种形状
@@ -406,13 +402,13 @@ $(function(){
 		//形状
 		var newBlock;
 		switch(r1){
-			case 1: newBlock = new block_i();break;
-			case 2: newBlock = new block_s();break;
-			case 3: newBlock = new block_fs();break;
-			case 4: newBlock = new block_l();break;
-			case 5: newBlock = new block_fl();break;
-			case 6: newBlock = new block_t();break;
-			case 7: newBlock = new block_fang();break;
+			case 0: newBlock = new block_i();break;
+			case 1: newBlock = new block_s();break;
+			case 2: newBlock = new block_fs();break;
+			case 3: newBlock = new block_l();break;
+			case 4: newBlock = new block_fl();break;
+			case 5: newBlock = new block_t();break;
+			case 6: newBlock = new block_fang();break;
 		}
 		//颜色
 		//console.log(r2)
@@ -432,11 +428,8 @@ $(function(){
 	},1000);*/
     function init(){
             clear(allBlock);
-            rn1 = Math.floor(Math.random()*8)
+            rn1 = Math.floor(Math.random()*7)
             rn2 = Math.floor(Math.random()*5);
-            
-            /*high = getHighScore();
-            $("#high").html(high);*/
         }
 	function play(){
             clear(beforeBlock);
@@ -447,7 +440,7 @@ $(function(){
             block_now = createBlock(rm1, rm2);
             
             block_now.printBlock();
-            rn1 = Math.floor(Math.random()*8);
+            rn1 = Math.floor(Math.random()*7);
             rn2 = Math.floor(Math.random()*5);
             block_next = createBlock(rn1,rn2);
             slideShow(block_next);
@@ -480,7 +473,7 @@ $(function(){
             	//console.log(3)
                 init();
                 play();
-                $(this).html("暂停").css("background","#FFC90E");
+                $(this).html("暂停");
             }else if ($(this).html() == "暂停") {
                 clearInterval(start);
                 $(this).html("继续");
@@ -502,13 +495,7 @@ $(function(){
                 $(this).html("暂停");
             }
         });
-        $("#j-clear").click(function(){
-            // document.cookie = "highScore = ''; expires="+(new Date(0)).toGMTString();
-            document.cookie = "highScore = 0";//并不是清除掉缓存，只是将最高分清零
-        })
-        $("#restart").click(function(){
-            location.reload();
-        })
+        
 })
 	
 

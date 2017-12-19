@@ -1,8 +1,9 @@
 		.wrap{
 			position: relative;
-			border: 1px solid;
+			
 		}
 		.pannel{
+			float: left;
 			margin-left: 300px;
 			width: 400px;
 			height: 600px;
@@ -14,9 +15,9 @@
 			z-index: 0;
 		}
 		.footer{
-			position: absolute;
-			right: 40%;
-			top:50%;
+			float:left;
+			margin-top: 300px;
+			margin-left: 300px;
 		}
 		.next table{
 			width: 140px;
@@ -25,5 +26,12 @@
 		}
 		.next td{
 
+			border: 1px solid;
+		}
+		.start{
+			width: 100px;
+			height: 30px;
+			border-radius: 3px;
+			background: #fff;
 			border: 1px solid;
 		}
